@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.google-cookie
 
 R/*_cache
 R/*_files
