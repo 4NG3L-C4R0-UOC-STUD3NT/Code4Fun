@@ -1,3 +1,5 @@
+# https://towardsdatascience.com/current-google-search-packages-using-python-3-7-a-simple-tutorial-3606e459e0d4
+
 from googlesearch import search 
 
 # to search 
