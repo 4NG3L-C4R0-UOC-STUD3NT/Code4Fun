@@ -26,11 +26,11 @@ for i in range(255 * 2):
     t.rt(91)
     t.pencolor(r,g,b)
 
-time.sleep(30)
+time.sleep(15)
 
 t.hideturtle()
 turtle.done()
 
-time.sleep(30)
+time.sleep(15)
 
 

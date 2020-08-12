@@ -20,9 +20,9 @@ while True:
     if b == 210:
         break
 
-time.sleep(60)
+time.sleep(15)
 
 t.hideturtle()
 turtle.done()
 
-time.sleep(60)
+time.sleep(15)

@@ -19,12 +19,12 @@ while True:
         t.forward(50)
         c = 0
         d += 1
-        if f >= 12:
+        if d >= 12:
             break
 
-time.sleep(60)
+time.sleep(15)
 
 t.hideturtle()
 turtle.done()
 
-time.sleep(60)
+time.sleep(15)

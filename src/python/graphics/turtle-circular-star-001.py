@@ -7,11 +7,16 @@ s.bgcolor("black")
 t.pensize(2)
 t.speed(0)
 
-for i in range(6):
-    for color in ['red', 'magenta', 'blue', 'cyan', 'green', 'yellow', 'white']:
-        t.color(color)
-        t.circle(100)
-        t.left(10)
+t.color('red', 'yellow')
+t.begin_fill()
+
+while True:
+    t.forward(300)
+    t.left(170)
+    if abs(t.pos()) < 1:
+        break
+
+t.end_fill()
 
 time.sleep(15)
 
