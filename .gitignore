@@ -6,3 +6,5 @@
 
 R/*_cache
 R/*_files
+
+__pycache__
