@@ -8,3 +8,5 @@ R/*_cache
 R/*_files
 
 __pycache__
+libs
+.vscode

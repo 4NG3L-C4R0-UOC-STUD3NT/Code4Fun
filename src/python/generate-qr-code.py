@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/python-generate-qr-code-using-pyqrcode-module/?ref=lbp
+# https://www.geeksforgeeks.org/reading-generating-qr-codes-python-using-qrtools/?ref=lbp
 import qrcode
 
 data = "https://instagram.com/pure.python"
