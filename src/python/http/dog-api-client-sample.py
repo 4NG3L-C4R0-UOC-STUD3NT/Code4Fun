@@ -113,11 +113,13 @@ def selectMenuOption(availableOptions):
 
 def showMainMenuOptions():
     print('')
+    print('Working with the DOG api [https://dog.ceo/dog-api/documentation/]')
+    print('')
     for code, option in mainMenuOptions.items():
         print(option)
     print('=================================')
 
-print('Working with the DOG api [https://dog.ceo/dog-api/documentation/]')
+
 while True:
     showMainMenuOptions()
     option = selectMenuOption(availableOptions)
