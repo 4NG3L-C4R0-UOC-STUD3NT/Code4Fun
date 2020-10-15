@@ -9,6 +9,7 @@ class DataType(enum.Enum):
     value = 2
 
 def stringTranslation(data : str, dataType: DataType, translations: dict) -> str:
+    print(data)
     if dataType == DataType.header:
         data = data.replace("%", "Porc")
     return data.translate(translations)
@@ -38,7 +39,7 @@ try:
         #print(sheet.name)
         outputFile = "data/out/{}-{}-{}.csv".format(fileName.replace(".xls", "0"), sheet.name.replace(" ",""), uuid.uuid4().hex)
         print("output file: " + outputFile)
-        with open(outputFile, "w", newline='') as csvfile:
+        with open(outputFile, "w", newline='', encoding="utf-8") as csvfile:
             #writer = csv.writer(csvfile, delimiter = ";")
             writer = csv.writer(csvfile, delimiter=';', quotechar='', quoting=csv.QUOTE_NONE, escapechar='\\')
             headers = [stringTranslation(cell.value, DataType.header, translations) for cell in sheet.row(3)]
@@ -47,7 +48,7 @@ try:
             print('Col at 5th position: {}'.format(headers[5]))
             writer.writerow(headers)
             for row_idx in range(4, sheet.nrows):
-                row = [cell.value if isinstance(cell.value, float) else cell.value for cell in sheet.row(row_idx)]
+                row = [int(cell.value) if isinstance(cell.value, float) else cell.value for cell in sheet.row(row_idx)]
                 row[4] = stringTranslation(row[4], DataType.value, str.maketrans(";", "."))
                 row[-1] = stringTranslation(row[-1], DataType.value, str.maketrans(";", ","))
                 #print(row)

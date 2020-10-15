@@ -41,7 +41,7 @@ try:
         #print(sheet.name)
         outputFile = "data/out/{}-{}-{}.csv".format(fileName.replace(".xls", "0"), sheet.name.replace(" ",""), uuid.uuid4().hex)
         print("output file: " + outputFile)
-        with open(outputFile, "w", newline='') as csvfile:
+        with open(outputFile, "w", newline='', encoding="utf-8") as csvfile:
             writer = csv.writer(csvfile, delimiter=',', quotechar='', quoting=csv.QUOTE_NONE, escapechar='\\')
             headers = [stringTranslation(cell.value, DataType.header, translations) for cell in sheet.row(0)]
             print(headers)
