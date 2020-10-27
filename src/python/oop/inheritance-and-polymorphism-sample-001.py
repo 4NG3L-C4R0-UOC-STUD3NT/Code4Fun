@@ -1,7 +1,7 @@
 # parent class 
 class Dog:
 
-    # attributes
+    # static attributes
     species = "Canis familiaris"
     
     # constructor
@@ -33,6 +33,9 @@ class Dog:
         #return '{ name: \'%s\', age: %d, species: \'%s\' }' % (self.name, self.age, self.species)
         return "[ name: '{}', age: {}, species: '{}' ]".format(self.name, self.age, self.species)
 
+    @classmethod
+    def species(cls):
+        return cls.species
 
 # child class
 class Bulldog(Dog):
