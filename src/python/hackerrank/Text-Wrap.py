@@ -1,5 +1,8 @@
+import textwrap
+
 def wrap(string, max_width):
-    return
+    wrapper = textwrap.TextWrapper(width=max_width) 
+    return wrapper.fill(text=string)
 
 if __name__ == '__main__':
     string, max_width = 'ABCDEFGHIJKLIMNOQRSTUVWXYZ', 4
